@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Code, Brain, Server, Wrench } from 'lucide-react';
 
@@ -12,7 +11,7 @@ const Skills = () => {
     {
       icon: <Brain size={32} />,
       title: "AI & ML Frameworks",
-      skills: ["TensorFlow", "PyTorch", "OpenCV", "Scikit-learn", "Keras", "YOLO"]
+      skills: ["TensorFlow", "PyTorch", "OpenCV", "Computer Vision", "Scikit-learn", "Keras", "YOLO"]
     },
     {
       icon: <Server size={32} />,

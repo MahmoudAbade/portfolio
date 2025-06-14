@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 
@@ -26,7 +25,7 @@ const Navigation = () => {
   const navItems = [
     { id: 'skills', label: 'Skills' },
     { id: 'projects', label: 'Projects' },
-    { id: 'experience', label: 'Experience' },
+    { id: 'courses', label: 'Courses' },
     { id: 'education', label: 'Education' },
     { id: 'contact', label: 'Contact' }
   ];

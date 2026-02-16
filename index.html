@@ -1,307 +1,339 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alex Rodriguez - AI & Computer Vision Developer</title>
-    <meta name="description" content="Junior Full Stack Developer specializing in AI and Computer Vision. Building intelligent systems with modern web technologies." />
-    <meta name="author" content="Mahmoud Abade" />
-
-    <meta property="og:title" content="Alex Rodriguez - AI & Computer Vision Developer" />
-    <meta property="og:description" content="Junior Full Stack Developer specializing in AI and Computer Vision. Building intelligent systems with modern web technologies." />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="style.css">
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jensen Omega - AI, ML &amp; Full Stack Engineer</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF6B6B", // Vibrant Coral
+              "primary-hover": "#FF5252",
+              "background-light": "#F3F4F6", // Light gray for light mode
+              "background-dark": "#0F172A", // Deep Navy Blue for dark mode
+              "surface-dark": "#1E293B", // Slightly lighter navy for cards/sections
+              "text-light": "#1F2937",
+              "text-dark": "#E2E8F0",
+              "text-muted": "#94A3B8",
+            },
+            fontFamily: {
+              display: ["Poppins", "sans-serif"],
+              sans: ["Poppins", "sans-serif"],
+            },
+            borderRadius: {
+              DEFAULT: "0.5rem",
+              'lg': '1rem',
+              'xl': '1.5rem',
+            },
+          },
+        },
+      };
+    </script>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-lg">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
-        <a href="#hero" id="user-name-nav" class="text-xl font-bold transition-colors text-gray-800">
-          Alex Rodriguez
-        </a>
-        <div class="hidden md:flex items-center space-x-8">
-          <a href="#skills" class="transition-colors hover:text-blue-600 text-gray-700">Skills</a>
-          <a href="#projects" class="transition-colors hover:text-blue-600 text-gray-700">Projects</a>
-          <a href="#courses" class="transition-colors hover:text-blue-600 text-gray-700">Courses</a>
-          <a href="#education" class="transition-colors hover:text-blue-600 text-gray-700">Education</a>
-          <a href="#contact" class="transition-colors hover:text-blue-600 text-gray-700">Contact</a>
-        </div>
-        <button id="theme-toggle" class="text-gray-800 dark:text-white">(Theme)</button>
-        <button id="mobile-menu-button" class="md:hidden text-gray-800 dark:text-white">(Menu)</button>
-      </div>
-      <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-800 shadow-lg rounded-lg mt-2 py-4">
-          <a href="#skills" class="block w-full text-left px-4 py-2 text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">Skills</a>
-          <a href="#projects" class="block w-full text-left px-4 py-2 text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">Projects</a>
-          <a href="#courses" class="block w-full text-left px-4 py-2 text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">Courses</a>
-          <a href="#education" class="block w-full text-left px-4 py-2 text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">Education</a>
-          <a href="#contact" class="block w-full text-left px-4 py-2 text-gray-700 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors">Contact</a>
-      </div>
+<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
+<nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto relative z-20">
+<div class="text-2xl font-bold tracking-tight" id="user-name-nav">
+        Jensen Omega
     </div>
-  </nav>
-
-  <main> {/* Added main tag to wrap sections */}
-    <section id="hero" class="h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-cyan-50 text-gray-800 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-30" style="background-image: radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);"></div>
-      <div class="text-center z-10 px-4 max-w-4xl">
-        <div class="animate-fade-in">
-          <h1 id="user-name" class="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-indigo-600 via-purple-600 to-teal-600 bg-clip-text text-transparent">
-            Alex Rodriguez
-          </h1>
-          <p id="user-bio" class="text-xl md:text-2xl text-gray-700 mb-4 font-medium">
-            Junior Full Stack Developer
-          </p>
-          <p id="user-location" class="text-lg md:text-xl text-gray-600 mb-8"></p>
-          <div class="flex justify-center space-x-8 mb-12">
-            <a id="user-email" href="mailto:alex.rodriguez@email.com" class="flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 transition-colors font-medium">
-              (Mail) <span>Email</span>
+<ul class="hidden md:flex space-x-8 text-sm font-medium text-gray-600 dark:text-gray-300">
+<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+<li><a class="hover:text-primary transition-colors" href="#about">About</a></li>
+<li><a class="hover:text-primary transition-colors" href="#projects">Projects</a></li>
+<li><a class="hover:text-primary transition-colors" href="#interests">Interests</a></li>
+<li><a class="hover:text-primary transition-colors" href="#contacts">Contacts</a></li>
+</ul>
+<div class="flex items-center gap-4">
+<button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300">
+    <span class="material-symbols-outlined">light_mode</span>
+</button>
+<button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 absolute top-20 left-0 w-full z-10 px-6 py-4 space-y-4 shadow-lg">
+    <a href="#" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Home</a>
+    <a href="#about" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">About</a>
+    <a href="#projects" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Projects</a>
+    <a href="#interests" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Interests</a>
+    <a href="#contacts" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Contacts</a>
+</div>
+<header class="relative w-full max-w-7xl mx-auto px-6 md:px-12 pt-10 pb-20 md:pb-32 flex flex-col md:flex-row items-center overflow-hidden">
+<div class="w-full md:w-1/2 z-10 space-y-6 md:pr-10">
+<h2 class="text-4xl md:text-5xl font-bold">
+            Hello <span class="text-primary">.</span>
+</h2>
+<div class="space-y-2">
+<p class="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-light flex items-center">
+<span class="inline-block w-8 h-[2px] bg-primary mr-3"></span> I'm <span id="user-name">Jensen</span>
+            </p>
+<h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 dark:from-white dark:to-gray-400 text-gray-900">
+                ML &amp; Deep Learning Engineer
+            </h1>
+<p class="text-xl text-primary font-medium mt-2">AI + Full Stack + DevOps</p>
+</div>
+<p id="user-bio" class="text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
+            Specializing in building intelligent systems and scalable architectures. Bridging the gap between cutting-edge AI research and production-grade full stack applications.
+        </p>
+<div class="pt-6 flex flex-wrap gap-4">
+<a class="px-8 py-3 bg-primary hover:bg-primary-hover text-white font-semibold rounded shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1" href="#contacts">
+                Hire Me
             </a>
-            <a id="user-linkedin" href="https://www.linkedin.com/in/Mahmoud-abade/" class="flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 transition-colors font-medium">
-              (LinkedIn) <span>LinkedIn</span>
+<a class="px-8 py-3 bg-transparent border border-gray-400 dark:border-gray-600 hover:border-primary text-gray-800 dark:text-gray-200 hover:text-primary font-semibold rounded transition-all" href="#resume">
+                Download CV
             </a>
-            <a id="user-github" href="https://github.com/MahmoudAbade" class="flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 transition-colors font-medium">
-              (GitHub) <span>GitHub</span>
+</div>
+</div>
+<div class="w-full md:w-1/2 mt-12 md:mt-0 relative flex justify-center items-center">
+<div class="absolute inset-0 bg-gradient-radial transform scale-150"></div>
+<div class="absolute top-0 right-10 text-gray-700 opacity-20 hidden md:block">
+<span class="material-symbols-outlined text-9xl transform rotate-45">navigate_next</span>
+</div>
+<div class="absolute bottom-10 left-0 text-gray-700 opacity-20 hidden md:block">
+<span class="material-symbols-outlined text-8xl transform rotate-180">navigate_next</span>
+</div>
+<div class="relative z-10 w-72 h-72 md:w-96 md:h-96">
+<div class="absolute inset-0 border-2 border-primary rounded-full transform scale-110 opacity-60"></div>
+<div class="absolute inset-0 border border-primary rounded-full transform scale-125 opacity-30 dashed"></div>
+<div class="w-full h-full rounded-full overflow-hidden border-4 border-surface-dark shadow-2xl relative">
+<img id="profile-image" alt="Portrait of Jensen, a software developer, smiling in a casual jacket" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiyYDKvFaf1DkIlx96VB-1od5tQ-r3WdMuM5d80d-jzQ3YEz4SdJZcBcqwpEdPDAIMSZdwDQaIoMrK8eLIV1IpxO00coP7tyda3f7i7Lp21HrSQbkk5p8-4TRQb8JWouh0G7Y5e7aVnbbRSONIJ8L1WaXABV2B_YPQW9mzp5dN5Wl-9SxOe-0v7gQM-PVgdyyESkWFnaqH5fRYVrk1olV4yC85vuZIymS-EGxfcp-RItVcErkY4HFib8BOg4Rxp80Wp9MKZArVvskk"/>
+</div>
+</div>
+</div>
+</header>
+<div class="w-full bg-gray-200 dark:bg-surface-dark/50 border-y border-gray-300 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-6 py-6 overflow-x-auto">
+<div class="flex justify-between items-center min-w-[600px] text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider text-sm md:text-base space-x-8 md:space-x-0">
+<span class="hover:text-primary cursor-default transition-colors">Python</span>
+<span class="hover:text-primary cursor-default transition-colors">PyTorch</span>
+<span class="hover:text-primary cursor-default transition-colors">TensorFlow</span>
+<span class="hover:text-primary cursor-default transition-colors">AWS</span>
+<span class="hover:text-primary cursor-default transition-colors">Docker</span>
+<span class="hover:text-primary cursor-default transition-colors">Kubernetes</span>
+<span class="hover:text-primary cursor-default transition-colors">React</span>
+<span class="hover:text-primary cursor-default transition-colors">Node.js</span>
+</div>
+</div>
+</div>
+<section class="w-full max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32 grid md:grid-cols-2 gap-16 items-start" id="about">
+<div class="space-y-8 relative">
+<div class="absolute left-0 top-2 bottom-2 w-[2px] bg-gradient-to-b from-primary to-transparent opacity-50 hidden md:block"></div>
+<div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
+<div class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">smart_toy</span>
+</div>
+<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">AI Model Deployment</h3>
+</div>
+<div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
+<div class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">layers</span>
+</div>
+<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">Full Stack AI Integration</h3>
+</div>
+<div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
+<div class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">settings_suggest</span>
+</div>
+<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">DevOps Automation</h3>
+</div>
+</div>
+<div class="space-y-8">
+<h2 class="text-3xl md:text-4xl font-bold">About me</h2>
+<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            I am a multi-disciplinary engineer passionate about operationalizing Artificial Intelligence. My journey began with traditional software development, but I quickly pivoted to machine learning and deep learning to solve more complex problems. I specialize in the entire lifecycle of AI products — from training robust models in PyTorch and TensorFlow to deploying them via Docker and Kubernetes on AWS, integrated seamlessly into full-stack web applications.
+        </p>
+<div class="grid grid-cols-3 gap-6 pt-4">
+<div>
+<div class="text-3xl font-bold flex items-center">
+                    120 <span class="text-primary text-2xl ml-1">+</span>
+</div>
+<p class="text-sm text-gray-500 mt-1">Models Deployed</p>
+</div>
+<div>
+<div class="text-3xl font-bold flex items-center">
+                    95 <span class="text-primary text-2xl ml-1">%</span>
+</div>
+<p class="text-sm text-gray-500 mt-1">Accuracy Rate</p>
+</div>
+<div>
+<div class="text-3xl font-bold flex items-center">
+                    10 <span class="text-primary text-2xl ml-1">+</span>
+</div>
+<p class="text-sm text-gray-500 mt-1">Years of experience</p>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full bg-gray-100 dark:bg-[#0B1221] py-20 md:py-28" id="projects">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="text-center mb-16 relative">
+<h2 class="text-3xl md:text-4xl font-bold inline-block relative z-10">Recent Projects</h2>
+<div class="w-1 h-12 bg-primary mx-auto mt-4"></div>
+</div>
+<div class="flex justify-center gap-4 mb-12 flex-wrap">
+<button class="px-6 py-2 bg-primary text-white text-sm font-medium rounded-full shadow-lg shadow-primary/20">All</button>
+<button class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">Machine Learning</button>
+<button class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">Full Stack</button>
+<button class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">DevOps</button>
+</div>
+<div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Projects will be loaded here -->
+</div>
+<div class="text-center mt-12">
+<a class="inline-flex items-center text-primary font-semibold hover:text-white hover:bg-primary px-6 py-2 rounded transition-all border border-primary" href="#">
+                View All Projects <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<section class="w-full max-w-7xl mx-auto px-6 md:px-12 py-20">
+<div class="text-center mb-12">
+<span class="text-primary text-sm font-bold tracking-widest uppercase">Expertise</span>
+<h2 class="text-3xl font-bold mt-2">My Service</h2>
+<p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">Delivering end-to-end solutions from intelligent algorithms to scalable cloud infrastructure.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-gray-100 dark:bg-[#162032] p-8 rounded-xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200 dark:hover:border-gray-700 group">
+<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">psychology</span>
+</div>
+<h3 class="text-xl font-bold mb-3">AI &amp; ML Solutions</h3>
+<p class="text-gray-500 text-sm leading-relaxed">
+                Developing and fine-tuning custom machine learning and deep learning models to automate complex decision-making processes.
+            </p>
+</div>
+<div class="bg-primary p-8 rounded-xl shadow-xl shadow-primary/20 transform md:-translate-y-4">
+<div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6 text-white">
+<span class="material-symbols-outlined">cloud_sync</span>
+</div>
+<h3 class="text-xl font-bold mb-3 text-white">DevOps &amp; Cloud</h3>
+<p class="text-white/80 text-sm leading-relaxed">
+                Automating deployment pipelines with CI/CD, containerization with Docker, and orchestration via Kubernetes on AWS.
+            </p>
+</div>
+<div class="bg-gray-100 dark:bg-[#162032] p-8 rounded-xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200 dark:hover:border-gray-700 group">
+<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">code</span>
+</div>
+<h3 class="text-xl font-bold mb-3">Full Stack Dev</h3>
+<p class="text-gray-500 text-sm leading-relaxed">
+                Building robust, responsive web applications that seamlessly integrate AI models for real-time inference and user interaction.
+            </p>
+</div>
+</div>
+</section>
+<section class="w-full bg-gray-50 dark:bg-background-dark py-20 border-t border-gray-200 dark:border-gray-800" id="interests">
+<div class="max-w-7xl mx-auto px-6 md:px-12">
+<div class="text-center mb-16 relative">
+<span class="text-primary text-xs font-bold tracking-widest uppercase mb-2 block">Lifestyle</span>
+<h2 class="text-3xl md:text-4xl font-bold inline-block relative z-10">Hobbies &amp; Interests</h2>
+<div class="w-1 h-12 bg-primary mx-auto mt-4"></div>
+<p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">Beyond code and algorithms, here is what fuels my creativity and strategic thinking.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
+<img alt="Economics and Data Dashboard" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS88wmcNRFXs5F_mo6A8-ltHzlCsCn-KdeDOraG0qCJQt2DZN4a-YbLpjFiZto7TbTPMhNyPqXxhoJ7SAqoly4lYFs82HhPZICptLr9HLkpqWke3mWvTfNL797G_aQzpWeJpkJEGGvi-CLaG52QIM8qBlEO2KuxAhHi1veWb-nsowMUpfUbGn7O7Rtv0BaGEKyF4RSf6xHf9Em1Oyh4O5xgTZbABzSFbMniMEtfVk8ddRwZPnRUy3S8oU7wyMsW_8aLnCuLXh9IsKw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
+<span class="material-symbols-outlined">monitoring</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-1">Economics &amp; Data</h3>
+<p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                        Visualizing economic trends and tracking market data through custom Excel dashboards.
+                    </p>
+</div>
+</div>
+<div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
+<img alt="Volleyball court" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Dp9c9Ly5EgKEmx3CLTiyafEaltcmyvyywIGrkW4gZ_z8emMc7wlxssM9ViYnW6pJsQh05dt3sGauD896lpb8s4C_zgi3d-c7BVkMzFXQeKMI-MFnKZG1CmMnhMnTlz42gyqJkbyq9a-nZTn4h7nvFDF9Pmf5MHBKsHmcCm8wjVHmlrent1TRh8-k3JFu_AZMucx1Y55rg-l6tswlOSA-EG3NKbMnt095LRDOLBhDzc5lvR9yOStYsou4SWCx-uwK9-5WRw_wnnoP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
+<span class="material-symbols-outlined">sports_volleyball</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-1">Volleyball</h3>
+<p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                        Active player and team manager, fostering teamwork and quick decision-making on the court.
+                    </p>
+</div>
+</div>
+<div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
+<img alt="Chess pieces" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx5Hi1VQUlbNrtVgltOr01e_g97Ndv8hiytnhq7H4HZvzYBceYuQOJgr7p0PX5L9c_8jM0MzVuEnqAD_xpfsqg90jKH0WqBqxpXpAc8wZ8BH9vOg9uSsCj6ozFxGXOHLtQGZcBhtER4FC1GClJFJLXXOmf-7c0A_eR9I8m25CUqzawLjZBZ95pFd8TpZ_U7Yn1qoaFuRtUGCRqnjgs0-LuHRaJhRVEt_RSYq52FhCYbz4VF_SFb0Usio7SwOUniv2BsONc2KsWs2QF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
+<span class="material-symbols-outlined">extension</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-1">Chess &amp; Puzzles</h3>
+<p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                        Sharpening strategic thinking and pattern recognition through complex puzzles and chess.
+                    </p>
+</div>
+</div>
+<div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
+<img alt="Stock market analysis" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdTQFj5SVCCjLz0RbW9UOnN9Wj6DlDe_imRQKUPs_2IApe2jvMenMYpV-a7FXbXQa5SI1jsJ3eKo7d5DcOuRzdmNpfyYpB9w97Zn7pcCE-xoaY72YkB19K3bBqNASdnbKRS_bXeanyxPv2OKV1P4Wn7avTU3qRMSZjTVxDw1YpMw_PfrW3aCbuhfXFBRtPXdH4bVU0P0Mcv5HksS89g8enw_dUEIVEc7wek3U7gUXgpp0S3SneUJgnpS1Eicbw7XPIKSUcVLQMIWUK"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
+<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+<h3 class="text-lg font-bold text-white mb-1">Investing</h3>
+<p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                        Applying financial analysis and risk management principles to personal portfolio growth.
+                    </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="contacts" class="w-full bg-background-light dark:bg-surface-dark/30 py-20">
+    <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+        <span class="text-primary text-sm font-bold tracking-widest uppercase">Contact</span>
+        <h2 class="text-3xl font-bold mt-2 mb-8">Get In Touch</h2>
+        <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-12">Ready to collaborate on exciting AI and full-stack projects? Let's connect and build something amazing together!</p>
+        <div class="flex justify-center gap-6 flex-wrap">
+            <a id="user-email" href="#" class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary transition-colors group">
+                <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+                <span class="font-medium">Email Me</span>
             </a>
-          </div>
+            <a id="user-linkedin" href="#" class="flex items-center gap-2 px-6 py-3 bg-[#0077b5] text-white rounded-lg hover:opacity-90 transition-opacity">
+                <span class="material-symbols-outlined">work</span>
+                <span class="font-medium">LinkedIn</span>
+            </a>
+            <a id="user-github" href="#" class="flex items-center gap-2 px-6 py-3 bg-[#333] text-white rounded-lg hover:opacity-90 transition-opacity">
+                <span class="material-symbols-outlined">code</span>
+                <span class="font-medium">GitHub</span>
+            </a>
         </div>
-        <a href="#skills" class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white shadow-lg hover:shadow-xl transition-all duration-300 text-indigo-600 hover:text-indigo-700 border border-gray-200 hover:border-indigo-300">
-          (ChevronDown)
-        </a>
-      </div>
-    </section>
-
-    <section id="skills" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">Technical Skills</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">
-            A comprehensive toolkit for building intelligent applications from concept to deployment
-          </p>
+    </div>
+</section>
+<footer class="w-full bg-white dark:bg-[#0B1221] border-t border-gray-200 dark:border-gray-800 py-10">
+<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="text-xl font-bold" id="footer-user-name">Jensen Omega</div>
+<div class="flex space-x-6 text-sm text-gray-500">
+<a class="hover:text-primary" href="#">Home</a>
+<a class="hover:text-primary" href="#about">About</a>
+<a class="hover:text-primary" href="#projects">Projects</a>
+<a class="hover:text-primary" href="#interests">Interests</a>
+<a class="hover:text-primary" href="#contacts">Contact</a>
+</div>
+<div class="text-xs text-gray-400">
+            © 2023 Jensen Omega. All rights reserved.
         </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-            <div class="text-blue-600 mb-4">(Code)</div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">Programming Languages</h3>
-            <div class="space-y-2">
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Python</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">JavaScript</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">TypeScript</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Java</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">C++</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">SQL</span>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-            <div class="text-blue-600 mb-4">(Brain)</div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">AI & ML Frameworks</h3>
-            <div class="space-y-2">
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">TensorFlow</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">PyTorch</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">OpenCV</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Computer Vision</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Scikit-learn</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Keras</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">YOLO</span>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-            <div class="text-blue-600 mb-4">(Server)</div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">Web Technologies</h3>
-            <div class="space-y-2">
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">React</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Node.js</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Express</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">MongoDB</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">PostgreSQL</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">REST APIs</span>
-            </div>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow">
-            <div class="text-blue-600 mb-4">(Wrench)</div>
-            <h3 class="text-xl font-semibold text-gray-800 mb-4">Tools & Technologies</h3>
-            <div class="space-y-2">
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Git</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Docker</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">AWS</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Google Cloud</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">Jupyter</span>
-              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mr-2 mb-2">VS Code</span>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white rounded-lg p-8 shadow-lg">
-          <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Soft Skills</h3>
-          <div class="flex flex-wrap justify-center gap-4">
-            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">Problem Solving</span>
-            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">Team Collaboration</span>
-            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">Communication</span>
-            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">Adaptability</span>
-            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">Critical Thinking</span>
-            <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full font-medium">Project Management</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">Featured Projects</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">A showcase of my work combining AI, computer vision, and full-stack development to solve real-world problems</p>
-        </div>
-        <div id="projects-container" class="space-y-12">
-          <!-- Projects will be dynamically inserted here -->
-        </div>
-      </div>
-    </section>
-
-    <section id="courses" class="py-20 bg-gray-50">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">Relevant Coursework</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">Academic foundation in computer science with specialized focus on AI, machine learning, and software development</p>
-        </div>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Course items */}
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-blue-500">
-            <div class="flex items-center gap-3 mb-4"><div class="text-blue-600">(Brain)</div><div><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500">AI/ML</span></div></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Machine Learning & Deep Learning</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Comprehensive study of ML algorithms, neural networks, and deep learning architectures. Covered supervised/unsupervised learning, backpropagation, CNNs, RNNs, and practical implementation using TensorFlow and PyTorch.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-blue-500">
-            <div class="flex items-center gap-3 mb-4"><div class="text-blue-600">(Brain)</div><div><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-purple-500 to-pink-500">AI/ML</span></div></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Computer Vision & Image Processing</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Advanced techniques in image analysis, feature detection, object recognition, and scene understanding. Hands-on experience with OpenCV, image filters, edge detection, and modern vision algorithms.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-blue-500">
-            <div class="flex items-center gap-3 mb-4"><div class="text-blue-600">(Code)</div><div><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-blue-500 to-cyan-500">Programming</span></div></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Data Structures & Algorithms</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Fundamental computer science concepts including arrays, linked lists, trees, graphs, sorting algorithms, and complexity analysis. Essential foundation for efficient software development.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-blue-500">
-            <div class="flex items-center gap-3 mb-4"><div class="text-blue-600">(Code)</div><div><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-green-500 to-teal-500">Backend</span></div></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Database Management Systems</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Relational database design, SQL programming, normalization, indexing, and transaction management. Practical experience with PostgreSQL, MongoDB, and database optimization techniques.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-blue-500">
-            <div class="flex items-center gap-3 mb-4"><div class="text-blue-600">(Code)</div><div><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-orange-500 to-red-500">Development</span></div></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Software Engineering</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Software development lifecycle, design patterns, version control with Git, testing methodologies, and collaborative development practices. Focus on building maintainable, scalable applications.</p>
-          </div>
-          <div class="bg-white rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow border-t-4 border-transparent hover:border-blue-500">
-            <div class="flex items-center gap-3 mb-4"><div class="text-blue-600">(BookOpen)</div><div><span class="inline-block px-3 py-1 rounded-full text-xs font-semibold text-white bg-gradient-to-r from-indigo-500 to-purple-500">Frontend</span></div></div>
-            <h3 class="text-xl font-bold text-gray-800 mb-3">Web Development</h3>
-            <p class="text-gray-600 leading-relaxed text-sm">Full-stack web development covering HTML, CSS, JavaScript, React, Node.js, and RESTful APIs. Built responsive web applications with modern frameworks and deployment strategies.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="py-20 bg-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold text-gray-800 mb-4">Education</h2>
-          <p class="text-gray-600 max-w-2xl mx-auto">Strong academic foundation in computer science with specialized focus on AI and machine learning</p>
-        </div>
-        <div class="max-w-4xl mx-auto">
-          <div class="bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl p-8 shadow-lg mb-8">
-            <div class="flex items-start gap-6">
-              <div class="text-blue-600">(GraduationCap)</div>
-              <div class="flex-1">
-                <h3 class="text-2xl font-bold text-gray-800 mb-2">Bachelor of Science in Computer Science</h3>
-                <p class="text-lg text-blue-600 font-semibold mb-2">Stanford University</p>
-                <p class="text-gray-600 mb-4">Graduated: May 2023 | GPA: 3.8/4.0</p>
-                <p class="text-gray-700 leading-relaxed">Concentrated in Artificial Intelligence and Machine Learning with additional coursework in
-                  computer vision and data science. Completed senior capstone project on real-time object
-                  detection for autonomous vehicles.</p>
-              </div>
-            </div>
-          </div>
-          <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-lg p-6 shadow-lg border-l-4 border-green-500">
-              <div class="flex items-center gap-3 mb-4"><div class="text-green-600">(Award)</div><h3 class="text-xl font-semibold text-gray-800">Achievements</h3></div>
-              <ul class="space-y-2 text-gray-700">
-                <li>• Dean's List for 6 consecutive semesters</li>
-                <li>• Outstanding Student in Computer Vision Course</li>
-                <li>• Winner - University AI Challenge 2022</li>
-                <li>• President, Computer Science Student Association</li>
-              </ul>
-            </div>
-            <div class="bg-white rounded-lg p-6 shadow-lg border-l-4 border-purple-500">
-              <div class="flex items-center gap-3 mb-4"><div class="text-purple-600">(BookOpen)</div><h3 class="text-xl font-semibold text-gray-800">Relevant Coursework</h3></div>
-              <div class="grid grid-cols-1 gap-2">
-                <span class="text-gray-700 text-sm bg-gray-50 px-3 py-1 rounded">Machine Learning & Deep Learning</span>
-                <span class="text-gray-700 text-sm bg-gray-50 px-3 py-1 rounded">Computer Vision & Image Processing</span>
-                <span class="text-gray-700 text-sm bg-gray-50 px-3 py-1 rounded">Data Structures & Algorithms</span>
-                <span class="text-gray-700 text-sm bg-gray-50 px-3 py-1 rounded">Database Management Systems</span>
-                <span class="text-gray-700 text-sm bg-gray-50 px-3 py-1 rounded">Software Engineering</span>
-                <span class="text-gray-700 text-sm bg-gray-50 px-3 py-1 rounded">Artificial Intelligence</span>
-                <span class="text-gray-700 text-sm bg-gray-50 px-3 py-1 rounded">Web Development</span>
-                <span class="text-gray-700 text-sm bg-gray-50 px-3 py-1 rounded">Statistics & Probability</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="py-20 bg-gradient-to-br from-gray-900 to-blue-900 text-white">
-      <div class="container mx-auto px-4">
-        <div class="text-center mb-16">
-          <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
-          <p class="text-gray-300 max-w-2xl mx-auto">Ready to collaborate on exciting AI and full-stack projects? Let's connect and build something amazing together!</p>
-        </div>
-        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
-          <div class="space-y-8">
-            <div>
-              <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-              <div class="space-y-4">
-                <div class="flex items-center gap-4"><div class="text-blue-400">(Mail)</div><div><p class="font-medium">Email</p><a href="mailto:alex.rodriguez@email.com" class="text-blue-400 hover:text-blue-300 transition-colors">alex.rodriguez@email.com</a></div></div>
-                <div class="flex items-center gap-4"><div class="text-blue-400">(Phone)</div><div><p class="font-medium">Phone</p><p class="text-gray-300">+1 (555) 123-4567</p></div></div>
-                <div class="flex items-center gap-4"><div class="text-blue-400">(MapPin)</div><div><p class="font-medium">Location</p><p class="text-gray-300">San Francisco, CA</p></div></div>
-              </div>
-            </div>
-            <div>
-              <h3 class="text-2xl font-semibold mb-6">Connect With Me</h3>
-              <div class="flex gap-6">
-                <a href="https://www.linkedin.com/in/Mahmoud-abade/" class="bg-blue-600 hover:bg-blue-500 p-3 rounded-lg transition-colors">(LinkedIn)</a>
-                <a href="https://github.com/MahmoudAbade" class="bg-gray-700 hover:bg-gray-600 p-3 rounded-lg transition-colors">(Github)</a>
-                <a href="mailto:alex.rodriguez@email.com" class="bg-purple-600 hover:bg-purple-500 p-3 rounded-lg transition-colors">(Mail)</a>
-              </div>
-            </div>
-            <div class="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-              <h4 class="text-lg font-semibold mb-3">Currently Available For:</h4>
-              <ul class="space-y-2 text-gray-300">
-                <li>• Full-time software development positions</li>
-                <li>• AI/ML engineering opportunities</li>
-                <li>• Computer vision project collaborations</li>
-                <li>• Freelance development work</li>
-              </ul>
-            </div>
-          </div>
-          <div class="bg-white/10 backdrop-blur-sm rounded-lg p-8">
-            <h3 class="text-2xl font-semibold mb-6">Send Me a Message</h3>
-            <form class="space-y-6"> {/* Removed onSubmit for static */}
-              <div>
-                <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-400" placeholder="Your full name" />
-              </div>
-              <div>
-                <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-400" placeholder="your.email@example.com" />
-              </div>
-              <div>
-                <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                <textarea id="message" name="message" required rows="4" class="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-white placeholder-gray-400 resize-none" placeholder="Tell me about your project or opportunity..."></textarea>
-              </div>
-              <button type="submit" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-semibold py-3 px-6 rounded-lg transition-colors flex items-center justify-center gap-2">
-                (Send) Send Message
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-  <script src="script.js"></script> {/* Existing script tag */}
-</body>
-</html>
+</div>
+</footer>
+<script>
+        // Check local storage or system preference
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            // Defaulting to dark for this specific design request based on the image provided
+            document.documentElement.classList.add('dark')
+        }
+    </script>
+<script src="script.js"></script>
+</body></html>

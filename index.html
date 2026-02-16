@@ -1,332 +1,406 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Jensen Omega - AI, ML &amp; Full Stack Engineer</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              primary: "#FF6B6B", // Vibrant Coral
-              "primary-hover": "#FF5252",
-              "background-light": "#F3F4F6", // Light gray for light mode
-              "background-dark": "#0F172A", // Deep Navy Blue for dark mode
-              "surface-dark": "#1E293B", // Slightly lighter navy for cards/sections
-              "text-light": "#1F2937",
-              "text-dark": "#E2E8F0",
-              "text-muted": "#94A3B8",
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Mahmoud Abade - AI, ML &amp; Full Stack Engineer</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#FF6B6B", // Vibrant Coral
+                        "primary-hover": "#FF5252",
+                        "background-light": "#F3F4F6", // Light gray for light mode
+                        "background-dark": "#0F172A", // Deep Navy Blue for dark mode
+                        "surface-dark": "#1E293B", // Slightly lighter navy for cards/sections
+                        "text-light": "#1F2937",
+                        "text-dark": "#E2E8F0",
+                        "text-muted": "#94A3B8",
+                    },
+                    fontFamily: {
+                        display: ["Poppins", "sans-serif"],
+                        sans: ["Poppins", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'lg': '1rem',
+                        'xl': '1.5rem',
+                    },
+                },
             },
-            fontFamily: {
-              display: ["Poppins", "sans-serif"],
-              sans: ["Poppins", "sans-serif"],
-            },
-            borderRadius: {
-              DEFAULT: "0.5rem",
-              'lg': '1rem',
-              'xl': '1.5rem',
-            },
-          },
-        },
-      };
+        };
     </script>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
-<nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto relative z-20">
-<div class="text-2xl font-bold tracking-tight" id="user-name-nav">
-        Jensen Omega
+
+<body
+    class="bg-background-light dark:bg-background-dark text-text-light dark:text-text-dark font-sans transition-colors duration-300">
+    <nav class="w-full py-6 px-6 md:px-12 flex justify-between items-center max-w-7xl mx-auto relative z-20">
+        <div class="text-2xl font-bold tracking-tight" id="user-name-nav">
+            Mahmoud Abade
+        </div>
+        <ul class="hidden md:flex space-x-8 text-sm font-medium text-gray-600 dark:text-gray-300">
+            <li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#about">About</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#projects">Projects</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#interests">Interests</a></li>
+            <li><a class="hover:text-primary transition-colors" href="#contacts">Contacts</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button id="theme-toggle"
+                class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300">
+                <span class="material-symbols-outlined">light_mode</span>
+            </button>
+            <button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+    <div id="mobile-menu"
+        class="hidden md:hidden bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 absolute top-20 left-0 w-full z-10 px-6 py-4 space-y-4 shadow-lg">
+        <a href="#" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Home</a>
+        <a href="#about" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">About</a>
+        <a href="#projects"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Projects</a>
+        <a href="#interests"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Interests</a>
+        <a href="#contacts"
+            class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Contacts</a>
     </div>
-<ul class="hidden md:flex space-x-8 text-sm font-medium text-gray-600 dark:text-gray-300">
-<li><a class="hover:text-primary transition-colors" href="#">Home</a></li>
-<li><a class="hover:text-primary transition-colors" href="#about">About</a></li>
-<li><a class="hover:text-primary transition-colors" href="#projects">Projects</a></li>
-<li><a class="hover:text-primary transition-colors" href="#interests">Interests</a></li>
-<li><a class="hover:text-primary transition-colors" href="#contacts">Contacts</a></li>
-</ul>
-<div class="flex items-center gap-4">
-<button id="theme-toggle" class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors text-gray-600 dark:text-gray-300">
-    <span class="material-symbols-outlined">light_mode</span>
-</button>
-<button id="mobile-menu-button" class="md:hidden text-gray-600 dark:text-gray-300">
-<span class="material-symbols-outlined text-3xl">menu</span>
-</button>
-</div>
-</nav>
-<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-background-dark border-b border-gray-200 dark:border-gray-800 absolute top-20 left-0 w-full z-10 px-6 py-4 space-y-4 shadow-lg">
-    <a href="#" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Home</a>
-    <a href="#about" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">About</a>
-    <a href="#projects" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Projects</a>
-    <a href="#interests" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Interests</a>
-    <a href="#contacts" class="block text-gray-600 dark:text-gray-300 hover:text-primary transition-colors">Contacts</a>
-</div>
-<header class="relative w-full max-w-7xl mx-auto px-6 md:px-12 pt-10 pb-20 md:pb-32 flex flex-col md:flex-row items-center overflow-hidden">
-<div class="w-full md:w-1/2 z-10 space-y-6 md:pr-10">
-<h2 class="text-4xl md:text-5xl font-bold">
-            Hello <span class="text-primary">.</span>
-</h2>
-<div class="space-y-2">
-<p class="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-light flex items-center">
-<span class="inline-block w-8 h-[2px] bg-primary mr-3"></span> I'm <span id="user-name">Jensen</span>
+    <header
+        class="relative w-full max-w-7xl mx-auto px-6 md:px-12 pt-10 pb-20 md:pb-32 flex flex-col md:flex-row items-center overflow-hidden">
+        <div class="w-full md:w-1/2 z-10 space-y-6 md:pr-10">
+            <h2 class="text-4xl md:text-5xl font-bold">
+                Hello <span class="text-primary">.</span>
+            </h2>
+            <div class="space-y-2">
+                <p class="text-xl md:text-2xl text-gray-500 dark:text-gray-400 font-light flex items-center">
+                    <span class="inline-block w-8 h-[2px] bg-primary mr-3"></span> I'm <span
+                        id="user-name">Mahmoud</span>
+                </p>
+                <h1
+                    class="text-4xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 dark:from-white dark:to-gray-400 text-gray-900">
+                    ML &amp; Deep Learning Engineer
+                </h1>
+                <p class="text-xl text-primary font-medium mt-2">AI + Full Stack + DevOps</p>
+            </div>
+            <p id="user-bio" class="text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
+                FullStack architect engineering sight & intelligence. From pixels to production, bringing AI & Vision to
+                life across the stack. Always learning, forever curious.
             </p>
-<h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400 dark:from-white dark:to-gray-400 text-gray-900">
-                ML &amp; Deep Learning Engineer
-            </h1>
-<p class="text-xl text-primary font-medium mt-2">AI + Full Stack + DevOps</p>
-</div>
-<p id="user-bio" class="text-gray-600 dark:text-gray-400 max-w-md leading-relaxed">
-            Specializing in building intelligent systems and scalable architectures. Bridging the gap between cutting-edge AI research and production-grade full stack applications.
-        </p>
-<div class="pt-6 flex flex-wrap gap-4">
-<a class="px-8 py-3 bg-primary hover:bg-primary-hover text-white font-semibold rounded shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1" href="#contacts">
-                Hire Me
-            </a>
-<a class="px-8 py-3 bg-transparent border border-gray-400 dark:border-gray-600 hover:border-primary text-gray-800 dark:text-gray-200 hover:text-primary font-semibold rounded transition-all" href="#resume">
-                Download CV
-            </a>
-</div>
-</div>
-<div class="w-full md:w-1/2 mt-12 md:mt-0 relative flex justify-center items-center">
-<div class="absolute inset-0 bg-gradient-radial transform scale-150"></div>
-<div class="absolute top-0 right-10 text-gray-700 opacity-20 hidden md:block">
-<span class="material-symbols-outlined text-9xl transform rotate-45">navigate_next</span>
-</div>
-<div class="absolute bottom-10 left-0 text-gray-700 opacity-20 hidden md:block">
-<span class="material-symbols-outlined text-8xl transform rotate-180">navigate_next</span>
-</div>
-<div class="relative z-10 w-72 h-72 md:w-96 md:h-96">
-<div class="absolute inset-0 border-2 border-primary rounded-full transform scale-110 opacity-60"></div>
-<div class="absolute inset-0 border border-primary rounded-full transform scale-125 opacity-30 dashed"></div>
-<div class="w-full h-full rounded-full overflow-hidden border-4 border-surface-dark shadow-2xl relative">
-<img id="profile-image" alt="Portrait of Jensen, a software developer, smiling in a casual jacket" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiyYDKvFaf1DkIlx96VB-1od5tQ-r3WdMuM5d80d-jzQ3YEz4SdJZcBcqwpEdPDAIMSZdwDQaIoMrK8eLIV1IpxO00coP7tyda3f7i7Lp21HrSQbkk5p8-4TRQb8JWouh0G7Y5e7aVnbbRSONIJ8L1WaXABV2B_YPQW9mzp5dN5Wl-9SxOe-0v7gQM-PVgdyyESkWFnaqH5fRYVrk1olV4yC85vuZIymS-EGxfcp-RItVcErkY4HFib8BOg4Rxp80Wp9MKZArVvskk"/>
-</div>
-</div>
-</div>
-</header>
-<div class="w-full bg-gray-200 dark:bg-surface-dark/50 border-y border-gray-300 dark:border-gray-800">
-<div class="max-w-7xl mx-auto px-6 py-6 overflow-x-auto">
-<div class="flex justify-between items-center min-w-[600px] text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider text-sm md:text-base space-x-8 md:space-x-0">
-<span class="hover:text-primary cursor-default transition-colors">Python</span>
-<span class="hover:text-primary cursor-default transition-colors">PyTorch</span>
-<span class="hover:text-primary cursor-default transition-colors">TensorFlow</span>
-<span class="hover:text-primary cursor-default transition-colors">AWS</span>
-<span class="hover:text-primary cursor-default transition-colors">Docker</span>
-<span class="hover:text-primary cursor-default transition-colors">Kubernetes</span>
-<span class="hover:text-primary cursor-default transition-colors">React</span>
-<span class="hover:text-primary cursor-default transition-colors">Node.js</span>
-</div>
-</div>
-</div>
-<section class="w-full max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32 grid md:grid-cols-2 gap-16 items-start" id="about">
-<div class="space-y-8 relative">
-<div class="absolute left-0 top-2 bottom-2 w-[2px] bg-gradient-to-b from-primary to-transparent opacity-50 hidden md:block"></div>
-<div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
-<div class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">smart_toy</span>
-</div>
-<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">AI Model Deployment</h3>
-</div>
-<div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
-<div class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">layers</span>
-</div>
-<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">Full Stack AI Integration</h3>
-</div>
-<div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
-<div class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
-<span class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">settings_suggest</span>
-</div>
-<h3 class="text-xl font-semibold group-hover:text-primary transition-colors">DevOps Automation</h3>
-</div>
-</div>
-<div class="space-y-8">
-<h2 class="text-3xl md:text-4xl font-bold">About me</h2>
-<p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-            I am a multi-disciplinary engineer passionate about operationalizing Artificial Intelligence. My journey began with traditional software development, but I quickly pivoted to machine learning and deep learning to solve more complex problems. I specialize in the entire lifecycle of AI products — from training robust models in PyTorch and TensorFlow to deploying them via Docker and Kubernetes on AWS, integrated seamlessly into full-stack web applications.
-        </p>
-<div class="grid grid-cols-3 gap-6 pt-4">
-<div>
-<div class="text-3xl font-bold flex items-center">
-                    120 <span class="text-primary text-2xl ml-1">+</span>
-</div>
-<p class="text-sm text-gray-500 mt-1">Models Deployed</p>
-</div>
-<div>
-<div class="text-3xl font-bold flex items-center">
-                    95 <span class="text-primary text-2xl ml-1">%</span>
-</div>
-<p class="text-sm text-gray-500 mt-1">Accuracy Rate</p>
-</div>
-<div>
-<div class="text-3xl font-bold flex items-center">
-                    10 <span class="text-primary text-2xl ml-1">+</span>
-</div>
-<p class="text-sm text-gray-500 mt-1">Years of experience</p>
-</div>
-</div>
-</div>
-</section>
-<section class="w-full bg-gray-100 dark:bg-[#0B1221] py-20 md:py-28" id="projects">
-<div class="max-w-7xl mx-auto px-6 md:px-12">
-<div class="text-center mb-16 relative">
-<h2 class="text-3xl md:text-4xl font-bold inline-block relative z-10">Recent Projects</h2>
-<div class="w-1 h-12 bg-primary mx-auto mt-4"></div>
-</div>
-<div class="flex justify-center gap-4 mb-12 flex-wrap">
-<button class="px-6 py-2 bg-primary text-white text-sm font-medium rounded-full shadow-lg shadow-primary/20">All</button>
-<button class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">Machine Learning</button>
-<button class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">Full Stack</button>
-<button class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">DevOps</button>
-</div>
-<div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Projects will be loaded here -->
-</div>
-<div class="text-center mt-12">
-<a class="inline-flex items-center text-primary font-semibold hover:text-white hover:bg-primary px-6 py-2 rounded transition-all border border-primary" href="#">
-                View All Projects <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
-</a>
-</div>
-</div>
-</section>
-<section class="w-full max-w-7xl mx-auto px-6 md:px-12 py-20">
-<div class="text-center mb-12">
-<span class="text-primary text-sm font-bold tracking-widest uppercase">Expertise</span>
-<h2 class="text-3xl font-bold mt-2">My Service</h2>
-<p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">Delivering end-to-end solutions from intelligent algorithms to scalable cloud infrastructure.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<div class="bg-gray-100 dark:bg-[#162032] p-8 rounded-xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200 dark:hover:border-gray-700 group">
-<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">psychology</span>
-</div>
-<h3 class="text-xl font-bold mb-3">AI &amp; ML Solutions</h3>
-<p class="text-gray-500 text-sm leading-relaxed">
-                Developing and fine-tuning custom machine learning and deep learning models to automate complex decision-making processes.
-            </p>
-</div>
-<div class="bg-primary p-8 rounded-xl shadow-xl shadow-primary/20 transform md:-translate-y-4">
-<div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6 text-white">
-<span class="material-symbols-outlined">cloud_sync</span>
-</div>
-<h3 class="text-xl font-bold mb-3 text-white">DevOps &amp; Cloud</h3>
-<p class="text-white/80 text-sm leading-relaxed">
-                Automating deployment pipelines with CI/CD, containerization with Docker, and orchestration via Kubernetes on AWS.
-            </p>
-</div>
-<div class="bg-gray-100 dark:bg-[#162032] p-8 rounded-xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200 dark:hover:border-gray-700 group">
-<div class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
-<span class="material-symbols-outlined">code</span>
-</div>
-<h3 class="text-xl font-bold mb-3">Full Stack Dev</h3>
-<p class="text-gray-500 text-sm leading-relaxed">
-                Building robust, responsive web applications that seamlessly integrate AI models for real-time inference and user interaction.
-            </p>
-</div>
-</div>
-</section>
-<section class="w-full bg-gray-50 dark:bg-background-dark py-20 border-t border-gray-200 dark:border-gray-800" id="interests">
-<div class="max-w-7xl mx-auto px-6 md:px-12">
-<div class="text-center mb-16 relative">
-<span class="text-primary text-xs font-bold tracking-widest uppercase mb-2 block">Lifestyle</span>
-<h2 class="text-3xl md:text-4xl font-bold inline-block relative z-10">Hobbies &amp; Interests</h2>
-<div class="w-1 h-12 bg-primary mx-auto mt-4"></div>
-<p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">Beyond code and algorithms, here is what fuels my creativity and strategic thinking.</p>
-</div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-<div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
-<img alt="Economics and Data Dashboard" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS88wmcNRFXs5F_mo6A8-ltHzlCsCn-KdeDOraG0qCJQt2DZN4a-YbLpjFiZto7TbTPMhNyPqXxhoJ7SAqoly4lYFs82HhPZICptLr9HLkpqWke3mWvTfNL797G_aQzpWeJpkJEGGvi-CLaG52QIM8qBlEO2KuxAhHi1veWb-nsowMUpfUbGn7O7Rtv0BaGEKyF4RSf6xHf9Em1Oyh4O5xgTZbABzSFbMniMEtfVk8ddRwZPnRUy3S8oU7wyMsW_8aLnCuLXh9IsKw"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
-<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
-<span class="material-symbols-outlined">monitoring</span>
-</div>
-<h3 class="text-lg font-bold text-white mb-1">Economics &amp; Data</h3>
-<p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                        Visualizing economic trends and tracking market data through custom Excel dashboards.
-                    </p>
-</div>
-</div>
-<div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
-<img alt="Volleyball court" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Dp9c9Ly5EgKEmx3CLTiyafEaltcmyvyywIGrkW4gZ_z8emMc7wlxssM9ViYnW6pJsQh05dt3sGauD896lpb8s4C_zgi3d-c7BVkMzFXQeKMI-MFnKZG1CmMnhMnTlz42gyqJkbyq9a-nZTn4h7nvFDF9Pmf5MHBKsHmcCm8wjVHmlrent1TRh8-k3JFu_AZMucx1Y55rg-l6tswlOSA-EG3NKbMnt095LRDOLBhDzc5lvR9yOStYsou4SWCx-uwK9-5WRw_wnnoP"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
-<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
-<span class="material-symbols-outlined">sports_volleyball</span>
-</div>
-<h3 class="text-lg font-bold text-white mb-1">Volleyball</h3>
-<p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                        Active player and team manager, fostering teamwork and quick decision-making on the court.
-                    </p>
-</div>
-</div>
-<div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
-<img alt="Chess pieces" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx5Hi1VQUlbNrtVgltOr01e_g97Ndv8hiytnhq7H4HZvzYBceYuQOJgr7p0PX5L9c_8jM0MzVuEnqAD_xpfsqg90jKH0WqBqxpXpAc8wZ8BH9vOg9uSsCj6ozFxGXOHLtQGZcBhtER4FC1GClJFJLXXOmf-7c0A_eR9I8m25CUqzawLjZBZ95pFd8TpZ_U7Yn1qoaFuRtUGCRqnjgs0-LuHRaJhRVEt_RSYq52FhCYbz4VF_SFb0Usio7SwOUniv2BsONc2KsWs2QF"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
-<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
-<span class="material-symbols-outlined">extension</span>
-</div>
-<h3 class="text-lg font-bold text-white mb-1">Chess &amp; Puzzles</h3>
-<p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                        Sharpening strategic thinking and pattern recognition through complex puzzles and chess.
-                    </p>
-</div>
-</div>
-<div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
-<img alt="Stock market analysis" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdTQFj5SVCCjLz0RbW9UOnN9Wj6DlDe_imRQKUPs_2IApe2jvMenMYpV-a7FXbXQa5SI1jsJ3eKo7d5DcOuRzdmNpfyYpB9w97Zn7pcCE-xoaY72YkB19K3bBqNASdnbKRS_bXeanyxPv2OKV1P4Wn7avTU3qRMSZjTVxDw1YpMw_PfrW3aCbuhfXFBRtPXdH4bVU0P0Mcv5HksS89g8enw_dUEIVEc7wek3U7gUXgpp0S3SneUJgnpS1Eicbw7XPIKSUcVLQMIWUK"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
-<div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
-<span class="material-symbols-outlined">trending_up</span>
-</div>
-<h3 class="text-lg font-bold text-white mb-1">Investing</h3>
-<p class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
-                        Applying financial analysis and risk management principles to personal portfolio growth.
-                    </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="contacts" class="w-full bg-background-light dark:bg-surface-dark/30 py-20">
-    <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
-        <span class="text-primary text-sm font-bold tracking-widest uppercase">Contact</span>
-        <h2 class="text-3xl font-bold mt-2 mb-8">Get In Touch</h2>
-        <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-12">Ready to collaborate on exciting AI and full-stack projects? Let's connect and build something amazing together!</p>
-        <div class="flex justify-center gap-6 flex-wrap">
-            <a id="user-email" href="#" class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary transition-colors group">
-                <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
-                <span class="font-medium">Email Me</span>
-            </a>
-            <a id="user-linkedin" href="#" class="flex items-center gap-2 px-6 py-3 bg-[#0077b5] text-white rounded-lg hover:opacity-90 transition-opacity">
-                <span class="material-symbols-outlined">work</span>
-                <span class="font-medium">LinkedIn</span>
-            </a>
-            <a id="user-github" href="#" class="flex items-center gap-2 px-6 py-3 bg-[#333] text-white rounded-lg hover:opacity-90 transition-opacity">
-                <span class="material-symbols-outlined">code</span>
-                <span class="font-medium">GitHub</span>
-            </a>
+            <div class="pt-6 flex flex-wrap gap-4">
+                <a class="px-8 py-3 bg-primary hover:bg-primary-hover text-white font-semibold rounded shadow-lg shadow-primary/30 transition-all transform hover:-translate-y-1"
+                    href="#contacts">
+                    Hire Me
+                </a>
+                <a class="px-8 py-3 bg-transparent border border-gray-400 dark:border-gray-600 hover:border-primary text-gray-800 dark:text-gray-200 hover:text-primary font-semibold rounded transition-all"
+                    href="#resume">
+                    Download CV
+                </a>
+            </div>
+        </div>
+        <div class="w-full md:w-1/2 mt-12 md:mt-0 relative flex justify-center items-center">
+            <div class="absolute inset-0 bg-gradient-radial transform scale-150"></div>
+            <div class="absolute top-0 right-10 text-gray-700 opacity-20 hidden md:block">
+                <span class="material-symbols-outlined text-9xl transform rotate-45">navigate_next</span>
+            </div>
+            <div class="absolute bottom-10 left-0 text-gray-700 opacity-20 hidden md:block">
+                <span class="material-symbols-outlined text-8xl transform rotate-180">navigate_next</span>
+            </div>
+            <div class="relative z-10 w-72 h-72 md:w-96 md:h-96">
+                <div class="absolute inset-0 border-2 border-primary rounded-full transform scale-110 opacity-60"></div>
+                <div class="absolute inset-0 border border-primary rounded-full transform scale-125 opacity-30 dashed">
+                </div>
+                <div
+                    class="w-full h-full rounded-full overflow-hidden border-4 border-surface-dark shadow-2xl relative">
+                    <img id="profile-image" alt="Portrait of Mahmoud Abade" class="w-full h-full object-cover"
+                        src="https://avatars.githubusercontent.com/u/168352012?v=4" />
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="w-full bg-gray-200 dark:bg-surface-dark/50 border-y border-gray-300 dark:border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 py-6 overflow-x-auto">
+            <div
+                class="flex justify-between items-center min-w-[600px] text-gray-500 dark:text-gray-400 font-semibold uppercase tracking-wider text-sm md:text-base space-x-8 md:space-x-0">
+                <span class="hover:text-primary cursor-default transition-colors">Python</span>
+                <span class="hover:text-primary cursor-default transition-colors">PyTorch</span>
+                <span class="hover:text-primary cursor-default transition-colors">TensorFlow</span>
+                <span class="hover:text-primary cursor-default transition-colors">AWS</span>
+                <span class="hover:text-primary cursor-default transition-colors">Docker</span>
+                <span class="hover:text-primary cursor-default transition-colors">Kubernetes</span>
+                <span class="hover:text-primary cursor-default transition-colors">React</span>
+                <span class="hover:text-primary cursor-default transition-colors">Node.js</span>
+            </div>
         </div>
     </div>
-</section>
-<footer class="w-full bg-white dark:bg-[#0B1221] border-t border-gray-200 dark:border-gray-800 py-10">
-<div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
-<div class="text-xl font-bold" id="footer-user-name">Jensen Omega</div>
-<div class="flex space-x-6 text-sm text-gray-500">
-<a class="hover:text-primary" href="#">Home</a>
-<a class="hover:text-primary" href="#about">About</a>
-<a class="hover:text-primary" href="#projects">Projects</a>
-<a class="hover:text-primary" href="#interests">Interests</a>
-<a class="hover:text-primary" href="#contacts">Contact</a>
-</div>
-<div class="text-xs text-gray-400">
-            © 2023 Jensen Omega. All rights reserved.
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-12 py-20 md:py-32 grid md:grid-cols-2 gap-16 items-start"
+        id="about">
+        <div class="space-y-8 relative">
+            <div
+                class="absolute left-0 top-2 bottom-2 w-[2px] bg-gradient-to-b from-primary to-transparent opacity-50 hidden md:block">
+            </div>
+            <div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
+                <div
+                    class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
+                    <span
+                        class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">smart_toy</span>
+                </div>
+                <h3 class="text-xl font-semibold group-hover:text-primary transition-colors">AI Model Deployment</h3>
+            </div>
+            <div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
+                <div
+                    class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
+                    <span
+                        class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">layers</span>
+                </div>
+                <h3 class="text-xl font-semibold group-hover:text-primary transition-colors">Full Stack AI Integration
+                </h3>
+            </div>
+            <div class="flex items-center space-x-6 pl-0 md:pl-8 group cursor-pointer">
+                <div
+                    class="p-3 bg-white dark:bg-surface-dark rounded-lg shadow-md group-hover:bg-primary transition-colors">
+                    <span
+                        class="material-symbols-outlined text-3xl text-primary group-hover:text-white transition-colors">settings_suggest</span>
+                </div>
+                <h3 class="text-xl font-semibold group-hover:text-primary transition-colors">DevOps Automation</h3>
+            </div>
         </div>
-</div>
-</footer>
-<script>
+        <div class="space-y-8">
+            <h2 class="text-3xl md:text-4xl font-bold">About me</h2>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                I am a multi-disciplinary engineer passionate about operationalizing Artificial Intelligence. My journey
+                began with traditional software development, but I quickly pivoted to machine learning and deep learning
+                to solve more complex problems. I specialize in the entire lifecycle of AI products — from training
+                robust models in PyTorch and TensorFlow to deploying them via Docker and Kubernetes on AWS, integrated
+                seamlessly into full-stack web applications.
+            </p>
+            <div class="grid grid-cols-3 gap-6 pt-4">
+                <div>
+                    <div class="text-3xl font-bold flex items-center">
+                        12 <span class="text-primary text-2xl ml-1">+</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-1">Projects Deployed</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold flex items-center">
+                        80 <span class="text-primary text-2xl ml-1">%</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-1">Accuracy Rate GPA</p>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold flex items-center">
+                        2 <span class="text-primary text-2xl ml-1">+</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-1">Years of experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="w-full bg-gray-100 dark:bg-[#0B1221] py-20 md:py-28" id="projects">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 relative">
+                <h2 class="text-3xl md:text-4xl font-bold inline-block relative z-10">Recent Projects</h2>
+                <div class="w-1 h-12 bg-primary mx-auto mt-4"></div>
+            </div>
+            <div class="flex justify-center gap-4 mb-12 flex-wrap">
+                <button
+                    class="px-6 py-2 bg-primary text-white text-sm font-medium rounded-full shadow-lg shadow-primary/20">All</button>
+                <button
+                    class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">Machine
+                    Learning</button>
+                <button
+                    class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">Full
+                    Stack</button>
+                <button
+                    class="px-6 py-2 bg-white dark:bg-surface-dark hover:bg-gray-200 dark:hover:bg-gray-700 text-sm font-medium rounded-full transition-colors border border-gray-200 dark:border-gray-700">DevOps</button>
+            </div>
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Projects will be loaded here -->
+            </div>
+            <div class="text-center mt-12">
+                <a class="inline-flex items-center text-primary font-semibold hover:text-white hover:bg-primary px-6 py-2 rounded transition-all border border-primary"
+                    href="#">
+                    View All Projects <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="w-full max-w-7xl mx-auto px-6 md:px-12 py-20">
+        <div class="text-center mb-12">
+            <span class="text-primary text-sm font-bold tracking-widest uppercase">Expertise</span>
+            <h2 class="text-3xl font-bold mt-2">My Service</h2>
+            <p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">Delivering end-to-end solutions from intelligent
+                algorithms to scalable cloud infrastructure.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div
+                class="bg-gray-100 dark:bg-[#162032] p-8 rounded-xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200 dark:hover:border-gray-700 group">
+                <div
+                    class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">psychology</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3">AI &amp; ML Solutions</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Developing and fine-tuning custom machine learning and deep learning models to automate complex
+                    decision-making processes.
+                </p>
+            </div>
+            <div class="bg-primary p-8 rounded-xl shadow-xl shadow-primary/20 transform md:-translate-y-4">
+                <div class="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6 text-white">
+                    <span class="material-symbols-outlined">cloud_sync</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-white">DevOps &amp; Cloud</h3>
+                <p class="text-white/80 text-sm leading-relaxed">
+                    Automating deployment pipelines with CI/CD, containerization with Docker, and orchestration via
+                    Kubernetes on AWS.
+                </p>
+            </div>
+            <div
+                class="bg-gray-100 dark:bg-[#162032] p-8 rounded-xl hover:shadow-xl transition-shadow border border-transparent hover:border-gray-200 dark:hover:border-gray-700 group">
+                <div
+                    class="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+                    <span class="material-symbols-outlined">code</span>
+                </div>
+                <h3 class="text-xl font-bold mb-3">Full Stack Dev</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">
+                    Building robust, responsive web applications that seamlessly integrate AI models for real-time
+                    inference and user interaction.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="w-full bg-gray-50 dark:bg-background-dark py-20 border-t border-gray-200 dark:border-gray-800"
+        id="interests">
+        <div class="max-w-7xl mx-auto px-6 md:px-12">
+            <div class="text-center mb-16 relative">
+                <span class="text-primary text-xs font-bold tracking-widest uppercase mb-2 block">Lifestyle</span>
+                <h2 class="text-3xl md:text-4xl font-bold inline-block relative z-10">Hobbies &amp; Interests</h2>
+                <div class="w-1 h-12 bg-primary mx-auto mt-4"></div>
+                <p class="text-gray-500 mt-4 max-w-xl mx-auto text-sm">Beyond code and algorithms, here is what fuels my
+                    creativity and strategic thinking.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
+                    <img alt="Economics and Data Dashboard"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDS88wmcNRFXs5F_mo6A8-ltHzlCsCn-KdeDOraG0qCJQt2DZN4a-YbLpjFiZto7TbTPMhNyPqXxhoJ7SAqoly4lYFs82HhPZICptLr9HLkpqWke3mWvTfNL797G_aQzpWeJpkJEGGvi-CLaG52QIM8qBlEO2KuxAhHi1veWb-nsowMUpfUbGn7O7Rtv0BaGEKyF4RSf6xHf9Em1Oyh4O5xgTZbABzSFbMniMEtfVk8ddRwZPnRUy3S8oU7wyMsW_8aLnCuLXh9IsKw" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
+                            <span class="material-symbols-outlined">monitoring</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Economics &amp; Data</h3>
+                        <p
+                            class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Visualizing economic trends and tracking market data through custom Excel dashboards.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
+                    <img alt="Volleyball court"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2Dp9c9Ly5EgKEmx3CLTiyafEaltcmyvyywIGrkW4gZ_z8emMc7wlxssM9ViYnW6pJsQh05dt3sGauD896lpb8s4C_zgi3d-c7BVkMzFXQeKMI-MFnKZG1CmMnhMnTlz42gyqJkbyq9a-nZTn4h7nvFDF9Pmf5MHBKsHmcCm8wjVHmlrent1TRh8-k3JFu_AZMucx1Y55rg-l6tswlOSA-EG3NKbMnt095LRDOLBhDzc5lvR9yOStYsou4SWCx-uwK9-5WRw_wnnoP" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
+                            <span class="material-symbols-outlined">sports_volleyball</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Volleyball</h3>
+                        <p
+                            class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Active player and team manager, fostering teamwork and quick decision-making on the court.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
+                    <img alt="Chess pieces"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx5Hi1VQUlbNrtVgltOr01e_g97Ndv8hiytnhq7H4HZvzYBceYuQOJgr7p0PX5L9c_8jM0MzVuEnqAD_xpfsqg90jKH0WqBqxpXpAc8wZ8BH9vOg9uSsCj6ozFxGXOHLtQGZcBhtER4FC1GClJFJLXXOmf-7c0A_eR9I8m25CUqzawLjZBZ95pFd8TpZ_U7Yn1qoaFuRtUGCRqnjgs0-LuHRaJhRVEt_RSYq52FhCYbz4VF_SFb0Usio7SwOUniv2BsONc2KsWs2QF" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
+                            <span class="material-symbols-outlined">extension</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Chess &amp; Puzzles</h3>
+                        <p
+                            class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Sharpening strategic thinking and pattern recognition through complex puzzles and chess.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative group rounded-2xl overflow-hidden h-80 shadow-lg cursor-pointer">
+                    <img alt="Stock market analysis"
+                        class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdTQFj5SVCCjLz0RbW9UOnN9Wj6DlDe_imRQKUPs_2IApe2jvMenMYpV-a7FXbXQa5SI1jsJ3eKo7d5DcOuRzdmNpfyYpB9w97Zn7pcCE-xoaY72YkB19K3bBqNASdnbKRS_bXeanyxPv2OKV1P4Wn7avTU3qRMSZjTVxDw1YpMw_PfrW3aCbuhfXFBRtPXdH4bVU0P0Mcv5HksS89g8enw_dUEIVEc7wek3U7gUXgpp0S3SneUJgnpS1Eicbw7XPIKSUcVLQMIWUK" />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-t from-background-dark/95 via-background-dark/50 to-transparent flex flex-col justify-end p-6">
+                        <div class="w-10 h-10 bg-primary rounded-lg flex items-center justify-center mb-4 text-white">
+                            <span class="material-symbols-outlined">trending_up</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-1">Investing</h3>
+                        <p
+                            class="text-gray-300 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4 group-hover:translate-y-0">
+                            Applying financial analysis and risk management principles to personal portfolio growth.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contacts" class="w-full bg-background-light dark:bg-surface-dark/30 py-20">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+            <span class="text-primary text-sm font-bold tracking-widest uppercase">Contact</span>
+            <h2 class="text-3xl font-bold mt-2 mb-8">Get In Touch</h2>
+            <p class="text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-12">Ready to collaborate on exciting AI and
+                full-stack projects? Let's connect and build something amazing together!</p>
+            <div class="flex justify-center gap-6 flex-wrap">
+                <a id="user-email" href="#"
+                    class="flex items-center gap-2 px-6 py-3 bg-white dark:bg-surface-dark border border-gray-200 dark:border-gray-700 rounded-lg hover:border-primary transition-colors group">
+                    <span
+                        class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">mail</span>
+                    <span class="font-medium">Email Me</span>
+                </a>
+                <a id="user-linkedin" href="#"
+                    class="flex items-center gap-2 px-6 py-3 bg-[#0077b5] text-white rounded-lg hover:opacity-90 transition-opacity">
+                    <span class="material-symbols-outlined">work</span>
+                    <span class="font-medium">LinkedIn</span>
+                </a>
+                <a id="user-github" href="#"
+                    class="flex items-center gap-2 px-6 py-3 bg-[#333] text-white rounded-lg hover:opacity-90 transition-opacity">
+                    <span class="material-symbols-outlined">code</span>
+                    <span class="font-medium">GitHub</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="w-full bg-white dark:bg-[#0B1221] border-t border-gray-200 dark:border-gray-800 py-10">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-xl font-bold" id="footer-user-name">Mahmoud Abade</div>
+            <div class="flex space-x-6 text-sm text-gray-500">
+                <a class="hover:text-primary" href="#">Home</a>
+                <a class="hover:text-primary" href="#about">About</a>
+                <a class="hover:text-primary" href="#projects">Projects</a>
+                <a class="hover:text-primary" href="#interests">Interests</a>
+                <a class="hover:text-primary" href="#contacts">Contact</a>
+            </div>
+            <div class="text-xs text-gray-400">
+                © 2025 Mahmoud Abade. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script>
         // Check local storage or system preference
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
@@ -335,5 +409,7 @@
             document.documentElement.classList.add('dark')
         }
     </script>
-<script src="script.js"></script>
-</body></html>
+    <script src="script.js"></script>
+</body>
+
+</html>
